@@ -145,6 +145,7 @@ public class Player : MonoBehaviour
             collision.gameObject.GetComponent<Animator>().SetTrigger("hit");
             Destroy(collision.gameObject, 2f);
             rig.AddForce(Vector2.up * jump,ForceMode2D.Impulse);
+            AudioController.current.PlayMusic(AudioController.current.anoterSfx);
         }
         #endregion
     }
